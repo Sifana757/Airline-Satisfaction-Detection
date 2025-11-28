@@ -20,12 +20,11 @@ st.set_page_config(
 @st.cache_resource
 def load_models():
     try:
-        model = pickle.load(open('model.pkl', 'rb'))
-        scaler = pickle.load(open('scaler.pkl', 'rb'))
-        encoder = pickle.load(open('label_encoder.pkl', 'rb'))
+        model = pickle.load(open('model.pkl','rb'))
+        scaler = pickle.load(open('scaler.pkl','rb'))
+        encoder = pickle.load(open('label_encoder.pkl','rb'))
         return model, scaler, encoder
-    except:
-        return None, None, None
+    
 
 
 model, scaler, encoder = load_models()
@@ -1028,4 +1027,5 @@ st.markdown("""
     <p>🎯 96.29% Accuracy | 📊 17 Features | 🤖 9 Models Tested</p>
     <p>Made with ❤️ using Python | © 2025</p>
 </div>
+
 """, unsafe_allow_html=True)
