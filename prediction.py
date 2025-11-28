@@ -19,7 +19,6 @@ st.set_page_config(
 # Load models
 @st.cache_resource
 def load_models():
-    try:
         model = pickle.load(open('model.pkl','rb'))
         scaler = pickle.load(open('scaler.pkl','rb'))
         encoder = pickle.load(open('label_encoder.pkl','rb'))
@@ -1029,3 +1028,4 @@ st.markdown("""
 </div>
 
 """, unsafe_allow_html=True)
+
